@@ -15,11 +15,11 @@ public class MoveCharacter : MonoBehaviour {
 		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
 
 		if (Input.GetKey(KeyCode.Space) && !isJumping) {
-			rigidbody.velocity += Vector2.up * 1F;
+			rigidbody.velocity += Vector2.up * 3F;
 			isJumping = true;
 		}
 
-		if (transform.position.y <= 0) {
+		if (rigidbody.velocity.y == 0) {
 			isJumping = false;
 		}
 	}
