@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveCharacter : MonoBehaviour {
+public class Character : MonoBehaviour {
 	bool isJumping;
 	Rigidbody2D rigidbody;
 
