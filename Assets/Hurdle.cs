@@ -7,7 +7,7 @@ public class Hurdle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-		rigidbody.velocity += Vector2.left * 2;
+		rigidbody.velocity += Vector2.left * 3;
 	}
 	
 	// Update is called once per frame
