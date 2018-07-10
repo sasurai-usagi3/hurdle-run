@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class MoveCharacter : MonoBehaviour {
 	bool isJumping;
+	Rigidbody2D rigidbody;
 
 	// Use this for initialization
 	void Start () {
 		isJumping = false;
+		rigidbody = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-
 		if (Input.GetKey(KeyCode.Space) && !isJumping) {
 			rigidbody.velocity += Vector2.up * 3F;
 			isJumping = true;
