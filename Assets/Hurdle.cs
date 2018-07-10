@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour {
+public class Hurdle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+		rigidbody.velocity += Vector2.left * 2;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject obj = GameObject.FindGameObjectWithTag ("hurdle");
-		Instantiate (obj, transform.position, Quaternion.identity);
 	}
 }
