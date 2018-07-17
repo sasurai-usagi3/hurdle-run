@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (counter >= goal) {
-			GameObject obj = GameObject.FindGameObjectWithTag ("hurdle");
+			GameObject obj = (GameObject) Resources.Load ("hurdle");
 			Instantiate (obj, transform.position, Quaternion.identity);
 			counter = 0;
 			goal = Random.Range(10, 200);
