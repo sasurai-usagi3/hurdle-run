@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour {
 	bool isJumping;
@@ -21,6 +22,12 @@ public class Character : MonoBehaviour {
 
 		if (rigidbody.velocity.y == 0) {
 			isJumping = false;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.CompareTag ("hurdle")) {
+			SceneManager.LoadScene("main");
 		}
 	}
 }

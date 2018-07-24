@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - hurdle
+  - Character
   layers:
   - Default
   - TransparentFX
