@@ -16,7 +16,7 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey(KeyCode.Space) && !isJumping) {
-			rigidbody.velocity += Vector2.up * 3F;
+			rigidbody.velocity += Vector2.up * 6F;
 			isJumping = true;
 		}
 
