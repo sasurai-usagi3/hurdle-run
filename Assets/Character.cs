@@ -27,7 +27,8 @@ public class Character : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("hurdle")) {
-			SceneManager.LoadScene("main");
+			GameObject button = GameObject.FindGameObjectWithTag ("resetButton");
+			button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y, 0);
 		}
 	}
 }
