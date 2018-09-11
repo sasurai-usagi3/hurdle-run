@@ -13,6 +13,10 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Mathf.Approximately (Time.timeScale, 0F)) {
+			return;
+		}
+
 		if (counter >= goal) {
 			GameObject obj = (GameObject) Resources.Load ("hurdle");
 			Instantiate (obj, transform.position, Quaternion.identity);
