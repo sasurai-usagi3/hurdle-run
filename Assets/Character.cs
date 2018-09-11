@@ -29,6 +29,7 @@ public class Character : MonoBehaviour {
 		if (other.gameObject.CompareTag ("hurdle")) {
 			GameObject button = GameObject.FindGameObjectWithTag ("resetButton");
 			button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y, 0);
+			Time.timeScale = 0f;
 		}
 	}
 }

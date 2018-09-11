@@ -16,6 +16,9 @@ public class PointLabel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		point += 0.1F;
+		if (Mathf.Approximately (Time.timeScale, 0F)) {
+			return;
+		}
 		textComponent.text = string.Format("Point: {0}", Mathf.Floor(point));
 	}
 }
