@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		counter = 0;
-		goal = Random.Range(10, 200);
+		goal = Random.Range(5, 60);
 	}
 	
 	// Update is called once per frame
